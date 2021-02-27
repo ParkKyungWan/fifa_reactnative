@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "피파온라인4 전적검색",
+    "slug": "fifa",
+    "privacy": "public",
+    "sdkVersion": "35.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.1.1",
+    "orientation": "portrait",
+    "icon": "./img/logo.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android":{
+      "package":"com.o3o.KyungWan",
+      "versionCode":4
+    }
+  }
+}
