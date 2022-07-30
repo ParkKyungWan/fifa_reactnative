@@ -195,7 +195,7 @@ class Details extends React.Component{
     //{JSON.stringify(navigation.getParam('받은거 이름', '기본값'))} 
 
     fetch("https://api.nexon.co.kr/fifaonline4/v1.0/matches/"+text.slice(1,text.length-1)
-    ,{headers: {Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNTUzOTA0ODEwIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTcyNjkzOTU3LCJleHAiOjE2MzU3NjU5NTcsImlhdCI6MTU3MjY5Mzk1N30.Vgey-uDJYTTrROKq6_RSJlSjK0Q6DbZ2mIgyCxrTDKQ"},})
+    ,{headers: {Authorization:"*****"},})
   .then(response => response.json())
   .then((json) => {
      this.setState({
@@ -431,7 +431,7 @@ class Profile extends React.Component{
     
     //유저 기본정보 조회
     fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users?nickname="+text.slice(1,text.length-1)
-    ,{headers: {Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNTUzOTA0ODEwIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTcyNjkzOTU3LCJleHAiOjE2MzU3NjU5NTcsImlhdCI6MTU3MjY5Mzk1N30.Vgey-uDJYTTrROKq6_RSJlSjK0Q6DbZ2mIgyCxrTDKQ"},})
+    ,{headers: {Authorization:"***"},})
     .then(response => response.json())
     .then((json) => {
        this.setState({
@@ -476,7 +476,8 @@ class Profile extends React.Component{
        .then(()=>{
        if( this.state.id !=null){
         fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/"+this.state.id+"/maxdivision"
-        ,{headers: {Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNTUzOTA0ODEwIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTcyNjkzOTU3LCJleHAiOjE2MzU3NjU5NTcsImlhdCI6MTU3MjY5Mzk1N30.Vgey-uDJYTTrROKq6_RSJlSjK0Q6DbZ2mIgyCxrTDKQ"},})
+        ,{headers: {
+           orization:"***"},})
         .then(response => response.json())
         .then((json) => {
            this.setState({
@@ -551,7 +552,7 @@ _mainmatch=()=>{
     this.setState({isLoading:true});
    // 공식경기 매치정보 조회
    fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/"+this.state.id+"/matches?matchtype=50&limit=20"
-   ,{headers: {Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNTUzOTA0ODEwIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTcyNjkzOTU3LCJleHAiOjE2MzU3NjU5NTcsImlhdCI6MTU3MjY5Mzk1N30.Vgey-uDJYTTrROKq6_RSJlSjK0Q6DbZ2mIgyCxrTDKQ"},})
+   ,{headers: {Authorization:***"},})
    .then(response => response.json())
    .then((json) => {
       this.setState({
@@ -567,7 +568,7 @@ _mainmatch=()=>{
     
     for(var t =0; t< this.state.match_ids.length;t++){
       fetch("https://api.nexon.co.kr/fifaonline4/v1.0/matches/"+this.state.match_ids[t]
-      ,{headers: {Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNTUzOTA0ODEwIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTcyNjkzOTU3LCJleHAiOjE2MzU3NjU5NTcsImlhdCI6MTU3MjY5Mzk1N30.Vgey-uDJYTTrROKq6_RSJlSjK0Q6DbZ2mIgyCxrTDKQ"},})
+      ,{headers: {Authorization:"***"},})
       .then(response => response.json())
       .then((json) => {
       this.setState({
@@ -608,7 +609,7 @@ _submatch=()=>{
     this.setState({isLoading:true});
   // 감독경기 매치정보 조회
   fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/"+this.state.id+"/matches?matchtype=52&limit=20"
-  ,{headers: {Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNTUzOTA0ODEwIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTcyNjkzOTU3LCJleHAiOjE2MzU3NjU5NTcsImlhdCI6MTU3MjY5Mzk1N30.Vgey-uDJYTTrROKq6_RSJlSjK0Q6DbZ2mIgyCxrTDKQ"},})
+  ,{headers: {Authorization:"***"},})
   .then(response => response.json())
   .then((json) => {
      this.setState({
@@ -623,7 +624,7 @@ _submatch=()=>{
    
    for(var t =0; t< this.state.match_ids.length;t++){
      fetch("https://api.nexon.co.kr/fifaonline4/v1.0/matches/"+this.state.match_ids[t]
-     ,{headers: {Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNTUzOTA0ODEwIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTcyNjkzOTU3LCJleHAiOjE2MzU3NjU5NTcsImlhdCI6MTU3MjY5Mzk1N30.Vgey-uDJYTTrROKq6_RSJlSjK0Q6DbZ2mIgyCxrTDKQ"},})
+     ,{headers: {Authorization:"***"},})
      .then(response => response.json())
      .then((json) => {
      this.setState({
